@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+
+
+input, textarea{
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight: bold;
+}
+::placeholder{
+    text-align: center;
+    padding-top: 40px;
+}
+#crearTarea{
+    text-align: center;
+    margin-top: 20%;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#crearTarea #textoTarea{
+    border-radius: 6px;
+    width: 500px;
+    height: 100px;
+    border:3px solid black;
+    resize: none;
+
+}
+#crearTarea #enviar{
+    margin-top: 2%;
+    border: 3px solid rgb(23, 194, 23);
+    background: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 70px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 17px;
+}
+#crearTarea #enviar:hover{
+    background: rgb(23, 194, 23);
+    color: white;
+}

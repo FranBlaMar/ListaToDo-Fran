@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleSheet" type="text/css" href="styles.css">
     <title>Lista To Do</title>
 </head>
 <body>
-    
+    <div class="lista">
+        <ol id="listaTareas">
+
+        </ol>
+    </div>
+    <form id="crearTarea">
+        <textarea id="textoTarea" placeholder="Introduzca la tarea..."></textarea><br>
+        <input type="submit" id="enviar" value="Crear Tarea"/>
+    </form>
 </body>
+<script src="todo.js"></script>
 </html>
