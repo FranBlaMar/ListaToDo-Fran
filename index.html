@@ -8,15 +8,16 @@
     <title>Lista To Do</title>
 </head>
 <body>
-    <div class="lista">
-        <ol id="listaTareas">
-
-        </ol>
+    <div class="contenedor">
+        <div class="lista">
+            <ol id="listaTareas">
+            </ol>
+        </div>
+        <form id="crearTarea">
+            <textarea id="textoTarea" placeholder="Introduzca la tarea..."></textarea><br>
+            <input type="submit" id="enviar" value="Crear Tarea"/>
+        </form>
     </div>
-    <form id="crearTarea">
-        <textarea id="textoTarea" placeholder="Introduzca la tarea..."></textarea><br>
-        <input type="submit" id="enviar" value="Crear Tarea"/>
-    </form>
 </body>
 <script src="todo.js"></script>
 </html>

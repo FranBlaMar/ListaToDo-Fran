@@ -1,8 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 
-
-
 input, textarea{
     font-family: "Montserrat";
     text-transform: uppercase;
@@ -42,3 +40,42 @@ input, textarea{
     background: rgb(23, 194, 23);
     color: white;
 }
+
+.contenedor{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ol{
+    padding: 0;
+}
+li{
+    font-size: 20px;
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    background-color: rgba(221, 221, 221, 0.87);
+
+}
+
+p{
+    margin-left: auto;
+}
+button{
+    margin-left: auto;
+    border-radius: 3px;
+    padding:10px;
+    background: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+}
+button:hover{
+    background: rgb(255,0,0);
+    color: rgb(255,255,255)
+}
+
