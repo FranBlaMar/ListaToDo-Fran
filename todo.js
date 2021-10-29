@@ -1,4 +1,4 @@
-let listaTareas = document.querySelector("#listaTareas");
+let listaTareasTodo = document.querySelector("#listaTareasTodo");
 let formTarea = document.querySelector("#crearTarea");
 let textArea = document.querySelector("#textoTarea");
 let boton = document.querySelector("#enviar");
@@ -100,7 +100,7 @@ function crearTarea(task,idTask){
     li.appendChild(checkbox);
     li.appendChild(cuerpoTarea);
     li.appendChild(botonBorrar);
-    listaTareas.appendChild(li);
+    listaTareasToDo.appendChild(li);
 }
 
 function borrarTarea(e){

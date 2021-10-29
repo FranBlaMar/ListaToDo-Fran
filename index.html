@@ -9,14 +9,25 @@
 </head>
 <body>
     <div class="contenedor">
-        <div class="lista">
-            <ol id="listaTareas">
+        <div class="ToDo">
+            <p>To Do</p>
+            <ol id="listaTareasToDo">
+            </ol>
+            <form id="crearTarea">
+                <textarea id="textoTarea" placeholder="Introduzca la tarea..."></textarea><br>
+                <input type="submit" id="enviar" value="Crear Tarea"/>
+            </form>
+        </div>
+        <div class="Doing">
+            <p>Doing</p>
+            <ol id="listaTareasDoing">
             </ol>
         </div>
-        <form id="crearTarea">
-            <textarea id="textoTarea" placeholder="Introduzca la tarea..."></textarea><br>
-            <input type="submit" id="enviar" value="Crear Tarea"/>
-        </form>
+        <div class="Done">
+            <p>Done</p>
+            <ol id="listaTareasDone">
+            </ol>
+        </div>
     </div>
 </body>
 <script src="todo.js"></script>
