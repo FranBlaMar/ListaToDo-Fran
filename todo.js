@@ -25,6 +25,8 @@ window.addEventListener("load", ()=>{
         //Si está marcado, hacemos que cada vez que se recargue la página esté marcado
         if (tareaGuardada.check == true){
             check.checked = true;
+            let pTachada = document.querySelector(`li[id="${claveTarea}"] p`);
+            pTachada.classList.add("tachado");
         }
 
         //Ahora le añado el evento change a cada check, si cambia su estado que cambie el valor check guardado en el localStorage
@@ -37,6 +39,8 @@ window.addEventListener("load", ()=>{
                     check: true
                 }
                 localStorage.setItem(claveTarea,JSON.stringify(task));
+                let pTachar = document.querySelector(`li[id="${claveTarea}"] p`);
+                pTachar.classList.add("tachado");
             }
             else{
                 const task ={
@@ -44,6 +48,8 @@ window.addEventListener("load", ()=>{
                     check: false
                 }
                 localStorage.setItem(claveTarea,JSON.stringify(task));
+                let pTachada = document.querySelector(`li[id="${claveTarea}"] p`);
+                pTachada.classList.remove("tachado");
             }
         })
     })
@@ -61,7 +67,7 @@ window.addEventListener("load", ()=>{
 formTarea.addEventListener("submit", (e)=>{
     e.preventDefault();
     //Obtengo la longitud del localstorage para poder asignarle un id unico a cada tarea
-    let id = localStorage.length;
+    let id = localStorage.length+1;
     //Creo un objeto task y le añado los tributos que necesite
     const task ={
         cuerpo: textArea.value,
@@ -72,6 +78,7 @@ formTarea.addEventListener("submit", (e)=>{
     formTarea.reset();
     //Llamo a la funcion de escribir la tarea en el html
     crearTarea(task,id);
+    location.reload();
 })
 
 function crearTarea(task,idTask){
@@ -88,7 +95,7 @@ function crearTarea(task,idTask){
     let textoboton = document.createTextNode("Borrar");
     botonBorrar.appendChild(textoboton);
     botonBorrar.id= idTask;
-    
+
     //Obtengo el dato "cuerpo" de la tarea almacenada en el localStorage
     li.appendChild(checkbox);
     li.appendChild(cuerpoTarea);
@@ -97,9 +104,19 @@ function crearTarea(task,idTask){
 }
 
 function borrarTarea(e){
-    let idTarea = e.target.id;
-    localStorage.removeItem(idTarea);
-    alert("Tarea Borrada");
+    let id = e.target.id;
+    console.log(id);
+    let checkbox = document.querySelector(`input[id="${id}"]`);
+    console.log(checkbox)
+    if (checkbox.checked){
+        let idTarea = e.target.id;
+        localStorage.removeItem(idTarea);
+        alert("Tarea Borrada");
+        location.reload();
+    }
+    else{
+        alert("No se puede eliminar una tarea no finalizada");
+    }
 }
     
     
